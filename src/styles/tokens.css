@@ -1,0 +1,37 @@
+:root {
+  --cream:       #F7F1E3;
+  --cream-deep:  #EDE3CC;
+  --paper:       #FFFCF5;
+  --ink:         #2A2118;
+  --ink-soft:    #6B5E4F;
+
+  --wood:        #9C7A4D;
+  --wood-dark:   #5C4628;
+
+  --bead-red:    #C73E3E;
+  --bead-blue:   #2B5C8F;
+
+  --accent:      #E89923;
+  --success:     #5A8B3A;
+  --error:       #B84A3E;
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+
+  --shadow-sm:   0 1px 4px rgba(42,33,24,0.10);
+  --shadow-md:   0 4px 16px rgba(42,33,24,0.13);
+  --shadow-lg:   0 8px 32px rgba(42,33,24,0.16);
+
+  --font-display: 'Grundschrift', Georgia, serif;
+  --font-ui:      'Grundschrift', 'Atkinson Hyperlegible', Arial, sans-serif;
+
+  --transition-fast: 150ms ease;
+  --transition-bead: 320ms cubic-bezier(0.34, 1.26, 0.64, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-bead: 150ms ease;
+  }
+}
