@@ -7,7 +7,7 @@ export class AudioSequencer {
   preload(clipNames: string[]): Promise<void> {
     const promises = clipNames.map(name =>
       new Promise<void>(resolve => {
-        const el = new Audio(`/audio/${name}.mp3`);
+        const el = new Audio(`${import.meta.env.BASE_URL}audio/${name}.mp3`);
         el.preload = 'auto';
         el.addEventListener('canplaythrough', () => resolve(), { once: true });
         el.addEventListener('error', () => resolve(), { once: true });
@@ -31,7 +31,7 @@ export class AudioSequencer {
   async play(clipName: string): Promise<void> {
     if (this.muted) return;
     return new Promise<void>(resolve => {
-      const el = new Audio(`/audio/${clipName}.mp3`);
+      const el = new Audio(`${import.meta.env.BASE_URL}audio/${clipName}.mp3`);
       this.currentEl = el;
       this.currentResolve = resolve;
 
